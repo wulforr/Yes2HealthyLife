@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="signup.js"></script>
+    <link rel="stylesheet" href="dbms3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>Yes 2 Healthy Life</title>
+</head>
+<body>
+        <nav class="navbar">
+                <ul>
+                        <li><a href="dbms1.php">Home</a></li>
+                        <li><a href="dbms.html">BMI Calculator</a></li>
+                        <li><a href="dbms4.html">Two Foods</a></li>
+                        <div class="navright">
+                        <li><a href="dbms2.html"><i class="fas fa-user"></i> Login</a></li>
+                        <li><a class="active" href="dbms3.html"><i class="fas fa-user-plus"></i> Signup</a></li>
+                        </div>
+                    </ul>
+                      
+        </nav>
+        <div class="pgsrt">
+        <h1>Signup</h1>
+    <form action ="signup.php" method="POST" class="clsform"><br>
+            <label for="uname"><strong>Username :</strong></label><br>
+            <input type="text" name="uname" class="myform" ><br><br><span id="unameerror"><?php echo $unameerr; ?></span>
+            <label for="email"><strong>Email :</strong></label><br>
+            <input type="text" name="email" class="myform" ><br><span class="error"><?php echo $emailerr; ?></span>
+            <label for="pass"><strong>Password :</strong></label><br>
+            <input type="password" name="pass" class="myform" ><br><span class="error"><?php echo $passerr; ?></span>
+            <label for="confpass"><strong>Confirm Password :</strong></label><br>
+            <input type="password" id="confpass" class="myform" ><br><span id="confpasserr"></span>
+            <input type="radio" name="gender" value="Male">Male&emsp;
+            <input type="radio" name="gender" value="Female">Female<br>
+            <input type="submit" id="signupbtn" value="submit" onclick="validate()">
+    </form>
+</div>
+</body>
+</html>

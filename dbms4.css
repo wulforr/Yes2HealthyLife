@@ -1,0 +1,102 @@
+body{
+    background: rgba(0,0,0,0.9);
+    margin: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+
+}
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+
+
+/*navbar*/
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.a1 {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #4CAF50;
+    text-decoration: none;
+}
+
+
+button a {
+    color: #111;
+}
+
+button {
+    background-color: dimgray;
+    border: none; 
+}
+.navright{
+    float: right;
+    margin-right: 2%;
+}
+
+
+
+
+form{
+    margin-top: 50px;
+}
+input{
+    margin-top: 50px;
+    height: 3em;
+    width: 20em;
+}
+input[type="submit"]
+{
+    margin-top: 10px;
+}
+h1{
+    color:orange;
+    font-size: 4rem;
+}

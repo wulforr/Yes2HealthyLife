@@ -1,0 +1,91 @@
+body{
+    background: rgba(0,0,0,0.9);
+    margin: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.a1 {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #4CAF50;
+    text-decoration: none;
+}
+
+.navright{
+    float: right;
+    margin-right: 2%;
+}
+
+.myform{
+    width: 400px;
+    height: 30px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    padding-left: 10px;
+
+}
+
+.pgsrt{
+    margin-top: 100px;
+}
+h1{
+    margin-left: 50%;
+}
+.clsform{
+    margin-left:40%;
+    margin-top: 50px;
+}
+
+#signupbtn{
+    width:412px;
+    background-color: green;
+    height: 30px;
+    margin-top: 20px;
+    border: none;
+}
+#signupbtn:hover{
+    transform: scale(1.1);
+    border:2px solid #ffcc00;
+    color: white;
+    background-color: #111;
+}
+#uname {
+    margin-bottom: 10px;
+}

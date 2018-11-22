@@ -1,0 +1,117 @@
+body{
+    background: rgb(0,0,0);
+    margin: 0;
+    color: #ffff00;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#fpage{
+    width: 100%;
+    margin-top: 36px;
+    background-color: burlywood;
+    margin-bottom: 2%;
+    margin-right: 5%;
+    padding: 2%;
+    padding-left: 3%;  
+}
+.myform {
+    position: relative;
+    margin-left: 1%;
+    margin-top: 1%;
+    max-width: 25%;
+}
+.bmi{
+    text-align: center;
+}
+#btn{
+    margin-left: 10%;
+    margin-top: 2%;
+    background-color: #333;
+    border: none;
+}
+#p1{
+    margin-left: 3%;
+}
+#image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    height: 280px;
+}
+.card{
+    height: 300px;
+}
+
+
+
+
+
+.navbar {
+    background-color: rgba(0, 0, 0,0.2);
+    z-index: 2;
+    margin-left: -16px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+    text-decoration: none;
+    color:  white;
+}
+
+.active {
+    background-color: #4CAF50;
+    /*text-decoration: none;*/
+}
+li a:hover{
+    text-decoration: none;
+    color:white;
+}
+
+
+
+/* bmi calculator  */
+
+
+
+#form2{
+    margin-left: 80px;
+}
+
+#weight{
+    position: relative;
+    left : -2px;
+}
+
+/* grids*/
+
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.navright{
+    float: right;
+}
