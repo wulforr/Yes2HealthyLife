@@ -20,8 +20,18 @@
                     <li><a href="dbms.html">BMI Calculator</a></li>
                     <li><a href="dbms4.html">Two Foods</a></li>
                     <div class="navright">
-                    <li><a href="dbms2.html"><i class="fas fa-user"></i> Login</a></li>
-                    <li><a href="dbms3.html"><i class="fas fa-user-plus"></i> Signup</a></li>
+                    <?php
+                    if(file_exists("user.txt"))
+                    {
+                        $myfile = fopen("user.txt","w") or die("Unable to open file");
+                        echo "<li> <a href=\"user page\" >".fgets($myfile)."</a></li>";
+                        echo "<li> <a href = \"logout\"></a></li>";
+                    }
+                    else{
+                    echo "<li><a href=\"dbms2.html\"><i class=\"fas fa-user\"></i> Login</a></li>";
+                    echo "<li><a href=\"dbms3.html\"><i class=\"fas fa-user-plus\"></i> Signup</a></li>";
+                    }
+                    ?>
                     </div>
                 </ul>
                   
