@@ -1,5 +1,5 @@
 <?php
-$unameerr = $emailerr = $gendererr = $passerr = "";
+
 $uname = $email = $gender = $pass = "";
 $host="localhost";
 $username="root";
