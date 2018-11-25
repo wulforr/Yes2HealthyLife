@@ -16,9 +16,9 @@
 <body>
     <nav class="navbar">
             <ul>
-                    <li><a href="dbms1.html">Home</a></li>
+                    <li><a href="dbms1.php">Home</a></li>
                     <li><a href="dbms.php">BMI Calculator</a></li>
-                    <li><a class="active" href="dbms4.html">Two Foods</a></li>
+                    <li><a class="active" href="dbms4.php">Two Foods</a></li>
                     <div class="navright">
                             <?php
                             $host="localhost";

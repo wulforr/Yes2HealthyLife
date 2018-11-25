@@ -1,33 +1,3 @@
-<?php
-
-$host="localhost";
-$username="root";
-$password="";
-$conn=mysqli_connect($host,$username,$password,"y2hl");
-if(!$conn)
-echo "Connection Unsuccessful";
-
-$var=$_POST["uname"];
-
-$var1=$_POST["height"];
-$var2=$_POST["weight"];
-$var3=($var2)/($var1*$var1)*10000;
-$sql1=mysqli_query($conn,"select username from temp where id = 1");
-$name1=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
-$name2=$name1["username"];
-
-$sql2=mysqli_query($conn,"select * from users where Name='$name2'");
-
-$name1=mysqli_fetch_array($sql2,MYSQLI_ASSOC);
-
-$name2=$name1["userid"];
-$name3="current_timestamp";
-$sql1=mysqli_query($conn,"insert into userbmi values($name2,$var3,$name3)");
-
-
-
-
-?>
 <html>
     <head>
         <title>
@@ -92,7 +62,7 @@ $sql1=mysqli_query($conn,"insert into userbmi values($name2,$var3,$name3)");
                       
                   </form>
                   <span id="p1"></span>
-                  <p>Your BMI has been saved.</p>
+                  
               </div>
               <div class="grid-2">
               <div>

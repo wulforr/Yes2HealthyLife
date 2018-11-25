@@ -9,15 +9,17 @@ if(!$conn)
 echo "Connection Unsuccessful";
 $uname=$_POST["uname"];
 $pass=$_POST["pass"];
-$sql1=mysqli_query($conn,"select Name from users where Name='$uname' and Password='$pass'");
-if(!$sql1)
-echo "Username not found";
+$sql1=mysqli_query($conn,"select * from users where Name='$uname' and Password='$pass'");
+$name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
+if($name["Name"]==NULL)
+{
+echo "Username or password incorrect<br>";
+echo "<a href=\"dbms2.html\">Login again</a><br>";
+echo "<a href=\"dbms3.html\">Please Sign up First</a>";
+}
 else {
-    /*$name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
+    $name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
     echo "hello ".$name["Name"];
-    $myfile = fopen("user.txt","w") or die("Unable to open file");
-    $uname=$_POST["uname"];
-    fwrite($myfile,$uname);*/
     $sql1=mysqli_query($conn,"update temp set username='$uname',flag = '1' where id=1");
     echo "<h1>Some fun facts</h1>";
     $random = rand(1,10);
