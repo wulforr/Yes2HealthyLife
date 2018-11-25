@@ -17,10 +17,11 @@ echo "Data updatation failed";
 else
 {
     echo "hello ".$uname;
-    $myfile = fopen("user.txt","w") or die("Unable to open file");
+    /*$myfile = fopen("user.txt","w") or die("Unable to open file");
     $uname=$_POST["uname"];
     fwrite($myfile,$uname);
-    fclose($myfile);
+    fclose($myfile);*/
+    $sql1=mysqli_query($conn,"update temp set username='$uname',flag = '1' where id=1");
     echo "<h1>Some fun facts</h1>";
     $random = rand(1,10);
     $sql2=mysqli_query($conn,"select fact from facts where foodid = '$random' ");

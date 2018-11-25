@@ -20,8 +20,8 @@
                     <li><a href="dbms.html">BMI Calculator</a></li>
                     <li><a href="dbms4.html">Two Foods</a></li>
                     <div class="navright">
-                    <?php
-                    if(file_exists("user.txt"))
+                    
+                    <!--if(file_exists("user.txt"))
                     {
                         $myfile = fopen("user.txt","w") or die("Unable to open file");
                         echo "<li> <a href=\"user page\" >".fgets($myfile)."</a></li>";
@@ -30,6 +30,28 @@
                     else{
                     echo "<li><a href=\"dbms2.html\"><i class=\"fas fa-user\"></i> Login</a></li>";
                     echo "<li><a href=\"dbms3.html\"><i class=\"fas fa-user-plus\"></i> Signup</a></li>";
+                    }-->
+                    <?php
+                    $host="localhost";
+                    $username="root";
+                    $password="";
+                    $conn=mysqli_connect($host,$username,$password,"y2hl");
+                    if(!$conn)
+                    echo "Connection Unsuccessful";
+                    $sql=mysqli_query($conn,"select flag from temp where id = 1");
+                    $name=mysqli_fetch_array($sql,MYSQLI_ASSOC);
+                    if($name["flag"]==0)
+                    {
+                        echo "<li><a href=\"dbms2.html\"><i class=\"fas fa-user\"></i> Login</a></li>";
+                    echo "<li><a href=\"dbms3.html\"><i class=\"fas fa-user-plus\"></i> Signup</a></li>";
+
+                    }
+                    else
+                    {
+                        $sql1=mysqli_query($conn,"select username from temp where id = 1");
+                        $name1=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
+                        echo "<li> <a href=\"user page\" >".$name1["username"]."</a></li>";
+                        echo "<li> <a href = \"facts2.php\">logout</a></li>";
                     }
                     ?>
                     </div>
