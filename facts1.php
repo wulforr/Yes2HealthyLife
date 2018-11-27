@@ -7,11 +7,13 @@ $password="";
 $conn=mysqli_connect($host,$username,$password,"y2hl");
 if(!$conn)
 echo "Connection Unsuccessful";
+$target="images/".basename($_FILES["image1"]["name"]);
 $uname=$_POST["uname"];
 $email=$_POST["email"];
 $pass=$_POST["pass"];
 $pass1=$_POST["confpass"];
 $gender=$_POST["gender"];
+$image=$_FILES["image1"]["name"];
 if($pass!=$pass1)
 {
     echo "passwords donot match";
@@ -19,7 +21,7 @@ if($pass!=$pass1)
 }
 else
 {
-$sql1=mysqli_query($conn,"insert into users(Name,Email,Password,Gender) values ('$uname','$email','$pass','$gender')");
+$sql1=mysqli_query($conn,"insert into users(Name,Email,Password,Gender,image) values ('$uname','$email','$pass','$gender','$image')");
 if(!$sql1)
 echo "Data updatation failed";
 else

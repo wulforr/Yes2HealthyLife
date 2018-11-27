@@ -24,9 +24,12 @@
         </nav>
         <div class="pgsrt">
         <h1>Signup</h1>
-    <form action ="facts1.php" method="POST" class="clsform"><br>
+    <form action ="facts1.php" method="POST" class="clsform" enctype="multipart/form-data"><br>
             <label for="uname"><strong>Username :</strong></label><br>
-            <input type="text" name="uname" class="myform" ><br><br>
+            <input type="text" name="uname" class="myform" ><br>
+            <input type="hidden" name="size" value="10000000">
+            <label for="uname"><strong>Select Profile Picture :</strong></label>
+            <input type ="file" name="image1" class="myform"><br>
             <label for="email"><strong>Email :</strong></label><br>
             <input type="text" name="email" class="myform" ><br>
             <label for="pass"><strong>Password :</strong></label><br>

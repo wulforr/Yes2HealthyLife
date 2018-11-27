@@ -75,3 +75,10 @@ button {
     text-align: center;
     margin: auto;
 }
+
+
+.grid-2 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}

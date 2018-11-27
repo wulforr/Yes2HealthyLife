@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar">
             <ul>
-                    <li><a href="dbms1.html">Home</a></li>
+                    <li><a href="dbms1.php">Home</a></li>
                     <li><a href="dbms.php">BMI Calculator</a></li>
                     <li><a href="dbms4.php">Two Foods</a></li>
                     <div class="navright">
@@ -58,10 +58,15 @@ $name2=$name1["userid"];
 $name3=$name1["Name"];
 $name4=$name1["Email"];
 $name5=$name1["Gender"];
-echo "Userid : ".$name2."<br>";
-echo "Name : ".$name3."<br>";
-echo "Email : ".$name4."<br>";
-echo "Gender : ".$name5."<br>";
+$name6=$name1["image"];
+echo "<div class=grid-2>";
+echo "<div><img src=\"images/".$name6."\" height=\"300\" width=\"250\"></div>";
+echo "<div>";
+echo "<br><br>Userid   : ".$name2."<br>";
+echo "Name     : ".$name3."<br>";
+echo "Email    : ".$name4."<br>";
+echo "Gender   : ".$name5."<br>";
+
 $sql2=mysqli_query($conn,"select * from userbmi where userid='$name2'");
 $name1=mysqli_fetch_array($sql2,MYSQLI_ASSOC);
 if($name1!=NULL)
@@ -73,6 +78,7 @@ while($name1=mysqli_fetch_array($sql2,MYSQLI_ASSOC))
 echo $name1["bmi"]."<br>";
 }
 }
+echo "</div>";
 ?>
 </div>
 </body>
