@@ -39,7 +39,7 @@
                             {
                                 $sql1=mysqli_query($conn,"select username from temp where id = 1");
                                 $name1=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
-                                echo "<li> <a href=\"user page\" >".$name1["username"]."</a></li>";
+                                echo "<li> <a href=\"user.php\" >".$name1["username"]."</a></li>";
                                 echo "<li> <a href = \"facts2.php\">logout</a></li>";
                             }
                             ?>

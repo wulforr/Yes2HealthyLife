@@ -34,7 +34,7 @@
                             {
                                 $sql1=mysqli_query($conn,"select username from temp where id = 1");
                                 $name1=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
-                                echo "<li> <a href=\"user page\" >".$name1["username"]."</a></li>";
+                                echo "<li> <a href=\"user.php\" >".$name1["username"]."</a></li>";
                                 echo "<li> <a href = \"facts2.php\">logout</a></li>";
                             }
                             ?>
@@ -64,10 +64,11 @@
     <div class="center">
        <?php
         $sql1=mysqli_query($conn,"select * from food where foodname='$uname'");
-        if(!$sql1)
+        $name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
+        if($name==NULL)
         echo "No such food found";
         else {
-            $name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
+            
             echo "Serving: ".$name["serving"]."<br>";
             echo "Calories: ".$name["calories"]."<br>";
             echo "Carbs: ".$name["carbs"]."<br>";
@@ -79,10 +80,10 @@
     <div class="center">
         <?php
     $sql1=mysqli_query($conn,"select * from food where foodname='$pass'");
-        if(!$sql1)
+    $name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);    
+    if($name==NULL)
         echo "No such food found";
         else {
-            $name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
             echo "Serving: ".$name["serving"]."<br>";
             echo "Calories: ".$name["calories"]."<br>";
             echo "Carbs: ".$name["carbs"]."<br>";
