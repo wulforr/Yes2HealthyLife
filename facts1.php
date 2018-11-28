@@ -1,3 +1,9 @@
+<html>
+    <head>
+        <title>Facts</title>
+    </head>
+    <link rel="stylesheet" href="fact.css">
+    <body>
 <?php
 
 $uname = $email = $gender = $pass = "";
@@ -22,12 +28,13 @@ if($pass!=$pass1)
 else
 {
 $sql1=mysqli_query($conn,"insert into users(Name,Email,Password,Gender,image) values ('$uname','$email','$pass','$gender','$image')");
+move_uploaded_file($_FILES['image1']['tmp_name'],$target);
 if(!$sql1)
 echo "Data updatation failed";
 else
 {
     $sql1=mysqli_query($conn,"update temp set username='$uname',flag = '1' where id=1");
-    echo "<h1>Some fun facts</h1>";
+    echo "<h1 class=\"center\">Some fun facts</h1>";
     $random = rand(1,10);
     $sql2=mysqli_query($conn,"select fact from facts where foodid = '$random' ");
     $funfact=mysqli_fetch_array($sql2,MYSQLI_ASSOC);
@@ -36,3 +43,10 @@ else
 }
 }
 ?>
+<script>
+    window.location.href="dbms1.php";
+    </script>
+
+
+</body>
+</html>

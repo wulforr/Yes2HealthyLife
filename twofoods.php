@@ -63,7 +63,7 @@
 <div class="container grid-2">
     <div class="center">
        <?php
-        $sql1=mysqli_query($conn,"select * from food where foodname='$uname'");
+        $sql1=mysqli_query($conn,"select * from fruit where foodname='$uname'");
         $name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
         if($name==NULL)
         echo "No such food found";
@@ -79,7 +79,7 @@
     </div>
     <div class="center">
         <?php
-    $sql1=mysqli_query($conn,"select * from food where foodname='$pass'");
+    $sql1=mysqli_query($conn,"select * from fruit where foodname='$pass'");
     $name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);    
     if($name==NULL)
         echo "No such food found";

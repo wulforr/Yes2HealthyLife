@@ -16,16 +16,7 @@ body{
     background-position: center;
     display: block;
     z-index: -1;
-    /*filter: blur(0px);
-    -webkit-filter: blur(10px);
-    transition: all 1000ms;
 
-}
-/*
-.showcase:hover::after {
-    filter: blur(0px);
-    -webkit-filter: blur(0px); 
-*/
 }
 
 .content {
@@ -93,7 +84,7 @@ body{
 
 .navbar {
     background-color: rgba(0, 0, 0, 0.2);
-    z-index: 2;
+    z-index: 1;
 }
 
 .a1 {
@@ -151,4 +142,25 @@ button {
 #hid1{
     border-width: 2px;
     border-color: red;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 5px;
+    transition: all;
+}
+.pad0{
+    padding: 0px;
+    
+}
+
+.link:hover{
+    transform: scale(1.2);
+}
+.pad1{
+    padding : 25px;
+}
+.pad{
+    padding-top: 25px;
 }

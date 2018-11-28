@@ -1,3 +1,81 @@
+
+<?php/*
+if($_POST["hidden"]==5678)
+{
+$uname = $email = $gender = $pass = "";
+$host="localhost";
+$username="root";
+$password="";
+$conn=mysqli_connect($host,$username,$password,"y2hl");
+if(!$conn)
+echo "Connection Unsuccessful";
+$target="images/".basename($_FILES["image1"]["name"]);
+$uname=$_POST["uname"];
+$email=$_POST["email"];
+$pass=$_POST["pass"];
+$pass1=$_POST["confpass"];
+$gender=$_POST["gender"];
+$image=$_FILES["image1"]["name"];
+if($pass!=$pass1)
+{
+    echo "passwords donot match";
+    echo "<a href=\"dbms3.html\">Go back</a>";
+}
+else
+{
+$sql1=mysqli_query($conn,"insert into users(Name,Email,Password,Gender,image) values ('$uname','$email','$pass','$gender','$image')");
+move_uploaded_file($_FILES['image1']['tmp_name'],$target);
+if(!$sql1)
+echo "Data updatation failed";
+else
+{
+    $sql1=mysqli_query($conn,"update temp set username='$uname',flag = '1' where id=1");
+    /*echo "<h1 class=\"center\">Some fun facts</h1>";
+    $random = rand(1,10);
+    $sql2=mysqli_query($conn,"select fact from facts where foodid = '$random' ");
+    $funfact=mysqli_fetch_array($sql2,MYSQLI_ASSOC);
+    /*echo "<h2>An Amazing fact : ".$funfact["fact"]."</h2>";
+    echo "<a href=\"dbms1.php\">click to continue</a>";
+*/}
+}
+}
+?>
+
+
+<?php
+/*
+if($_POST["hidden1"]==1234)
+{
+$host="localhost";
+$username="root";
+$password="";
+$conn=mysqli_connect($host,$username,$password,"y2hl");
+if(!$conn)
+echo "Connection Unsuccessful";
+$uname=$_POST["uname"];
+$pass=$_POST["pass"];
+$sql1=mysqli_query($conn,"select * from users where Name='$uname' and Password='$pass'");
+$name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
+if($name["Name"]==NULL)
+{
+    echo "<div class=\"center\">";
+echo "Username or password incorrect<br>";
+echo "<a href=\"dbms2.html\">Login again</a><br>";
+echo "<a href=\"dbms3.html\">Please Sign up First</a>";
+echo "</div>";
+}
+else {
+    $sql1=mysqli_query($conn,"update temp set username='$uname',flag = '1' where id=1");
+    /*echo "<h1 class=\"center\">Some fun facts</h1>";
+    $random = rand(1,10);
+    $sql1=mysqli_query($conn,"select fact from facts where foodid = '$random' ");
+    $funfact=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
+   /* echo "<h2>An Amazing fact : ".$funfact["fact"]."</h2>";
+    echo "<a href=\"dbms1.php\" class=\"center\">click to continue</a>";
+*/}
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +94,7 @@
 <body>
     <nav class="navbar">
             <ul>
-                    <li><a class="active" href="dbms1.html">Home</a></li>
+                    <li><a class="active" href="dbms1.php">Home</a></li>
                     <li><a href="dbms.php">BMI Calculator</a></li>
                     <li><a href="dbms4.php">Two Foods</a></li>
                     <div class="navright">
@@ -65,22 +143,25 @@
 
 
 
-    <section class="services">
-    <div class="container grid-2 center wow bounceInLeft">
-        <div>
+    <section class="services pad0">
+    <div class="container grid-2 center pad0">
+    <a href ="dbms.php" class="pad1 link">    
+    <div class="pad0">
             <input type="hidden" id="hid1">
-            If you wanna check your bmi click here;
+            <p class="pad1">If you wanna check your bmi click here.</p>
         </div>
-        <div>
-            If you want a diet plan which is curated specifically for you then no need to search more you have come to the right place. 
+                </a>
+        <a href="diet.php" class="pad1 link">
+        <div  class="pad0">
+            <p class="pad1">If you want a diet plan which is curated specifically for you then no need to search more you have come to the right place. </p>
         </div>
-
+                </a>
     </div>
     </section>
 
 
     <section class="about bg-light">
-        <div class="container wow lightSpeedIn">
+        <div class="container">
             <div class="grid-2">
                 <div class="center">
                     <i class="fas fa-laptop-code fa-10x">
@@ -88,7 +169,7 @@
                 </div>
                 <div class="about1">
                     <h2>About Us</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque aliquam harum, nulla dolorem sed autem. Sint, natus? In, deleniti. Deleniti, ab natus minima nostrum, suscipit numquam necessitatibus ipsum impedit, laudantium aut nam sapiente doloremque dolorem labore quaerat vel saepe cum?</p>
+                    <p>We are a non profit organisation which works to create awareness among people about health and healthy food habits.</p>
 
                 </div>
             </div>

@@ -1,13 +1,13 @@
 body{
-    background: rgb(0,0,0);
+    background: #000;
     margin: 0;
-    color: #ffff00;
+    color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #fpage{
     width: 100%;
     margin-top: 36px;
-    background-color: burlywood;
+    background-color:rgb(74, 81, 85);
     margin-bottom: 2%;
     margin-right: 5%;
     padding: 2%;
@@ -18,15 +18,36 @@ body{
     margin-left: 1%;
     margin-top: 1%;
     max-width: 25%;
+    padding-left: 17px;
 }
-.bmi{
+.center{
     text-align: center;
+    margin: auto;
 }
 #btn{
-    margin-left: 10%;
+    margin-left: 8%;
     margin-top: 2%;
-    background-color: #333;
-    border: none;
+    background-color:#fff;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid black;
+}
+#btn:hover{
+    background-color: rgb(219, 45, 45);
+    transform:scale(1.1);
+}
+#btn1{    
+    margin-top: 2%;
+    background-color:#fff;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid black;
+}
+#btn1:hover{
+    background-color: rgb(219, 45, 45);
+    transform:scale(1.1);
 }
 #p1{
     margin-left: 3%;
@@ -35,7 +56,7 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 500px;
     height: 280px;
 }
 .card{
@@ -96,8 +117,8 @@ li a:hover{
 
 
 
-#form2{
-    margin-left: 80px;
+.form2{
+    margin-left: 0px;
 }
 
 #weight{
@@ -110,14 +131,31 @@ li a:hover{
 .grid-2{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 50px;
 }
 .navright{
     float: right;
 }
 
 
-
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+.bminfo{
+    padding: 20px;
+}
 p{
     color: #111;
+}
+
+.color{
+    color:rgb(216, 43, 43);
+}
+
+input{
+    padding: 5px;
+    border-radius: 20px;
+    border: 2px solid purple;
 }

@@ -47,9 +47,7 @@ $sql1=mysqli_query($conn,"insert into userbmi values($name2,$var3,$name3)");
                            <li><a class="active" href="dbms.php">BMI Calculator</a></li>
                             <li><a href="dbms4.php">Two Foods</a></li>
                             <div class="navright">
-                                <!--<li><a href="dbms2.html"><i class="fas fa-user"></i> Login</a></li>
-                                <li><a href="dbms3.html"><i class="fas fa-user-plus"></i> Signup</a></li>
-                                -->
+                               
                                 <?php
                     $host="localhost";
                     $username="root";
@@ -78,31 +76,47 @@ $sql1=mysqli_query($conn,"insert into userbmi values($name2,$var3,$name3)");
                           
             </nav>
               <div id="fpage" class="jumbotron">
-                  <h1 class="bmi">BMI Calculator</h1>
+                  <h1 class="bmi center">BMI Calculator</h1>
                   <br>
-                  <form method="POST" action="bmi.php" id="form2">
+                  <form method="POST" action="bmi.php" class="form2 center">
                       <label for="uname"><strong>Username :</strong></label>
-                      <input type="text" id="uname" name="uname" class="myform" style="width:500px"><br>
-                      <label for="height"><strong>Height :&emsp;&ensp;</strong></label>
-                      <input type="text" id="height" name="height"  class="myform" style="width:500px"> Cm<br>
-                      <label for="weight"><strong>Weight :&emsp;&ensp;</strong></label>
-                      <input type="text" id="weight" name="weight" class="myform" style="width:500px" id="weight1"> Kg<br>
-                      <input type="button" id="btn" value="calculate" onclick="calcbmi()">  
+                      <input type="text" id="uname" name="uname" class="myform" style="width:500px" placeholder="Enter your username"><br>
+                      &emsp;&ensp;<label for="height"><strong>Height :&emsp;&ensp;</strong></label>
+                      <input type="text" id="height" name="height"  class="myform" style="width:500px" placeholder="Enter your height"> Cm<br>
+                      &emsp;&ensp;<label for="weight"><strong>Weight :&emsp;&ensp;</strong></label>
+                      <input type="text" id="weight" name="weight" class="myform" style="width:500px" id="weight1" placeholder="Enter your weight"> Kg<br>
+                      <input type="button" id="btn" value="Calculate" onclick="calcbmi()"> &emsp;&ensp; 
                       <input type="submit" id="btn1" value="Save">
                       
                   </form>
-                  <span id="p1"></span>
-                  <p>Your BMI has been saved.</p>
+                  <span id="p1"> Your bmi has been saved</span>
+                  
               </div>
-              <div class="grid-2">
+              <div class="grid-2 bminfo">
               <div>
-              <h4>Check your BMI here:</h4>
-              <img src="images/bmi1.jpg" id="image">
+              <h4 class="color">Check your BMI here:</h4>
+              <img src="images/bmi.jpg" id="image" width="800">
               </div>
               <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt corporis assumenda dolorum explicabo facilis earum labore laboriosam facere voluptate, enim maxime est ullam necessitatibus itaque iusto? Voluptatem, modi. Perferendis, deserunt?
+               <p class="color"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt corporis assumenda dolorum explicabo facilis earum labore laboriosam facere voluptate, enim maxime est ullam necessitatibus itaque iusto? Voluptatem, modi. Perferendis, deserunt?</p>
               </div>
               </div>
+              
+              <section class="about bg-light">
+        <div class="container">
+            <div class="grid-2">
+                <div class="center">
+                    <i class="fas fa-laptop-code fa-10x">
+                    </i>
+                </div>
+                <div class="about1">
+                    <h2>About Us</h2>
+                    <p>We are a non profit organisation which works to create awareness among people about health and healthy food habits.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
         <script src="dbms.js"></script>
             </body>
 
