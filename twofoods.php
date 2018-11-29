@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,52 +44,59 @@
                   
     </nav>
     <?php
-        $host="localhost";
-        $username="root";
-        $password="";
-        $conn=mysqli_connect($host,$username,$password,"y2hl");
-        if(!$conn)
-        echo "Connection Unsuccessful";
         $uname=$_POST["food1"];
         $pass=$_POST["food2"];
+        $type=$_POST["type"];
+        $type1=$_POST["type1"];
     ?>
 
-    <div class="container">    
+    <div class="container pad1">    
     <h1 class="center">Twofoods</h1>
     <form method="POST" action="twofoods.php" class="center">
+    <select name="type" id="type">
+            <option value="fruit">Fruit</option>
+            <option value="vegetables">Vegetable</option>
+            <option value="other">Other</option>
+            </select>&nbsp;&nbsp;
+            <select name="type1" id="type1">
+            <option value="fruit">Fruit</option>
+            <option value="vegetables">Vegetable</option>
+            <option value="other">Other</option>
+            </select>            <br>
         <input type="text" name="food1" value=<?php echo $uname;?>>&nbsp;&nbsp;<input type="text" name="food2" value=<?php echo $pass;?>><br><br>
         <input type="submit" value="Compare!">
     </form>
 </div>
 <div class="container grid-2">
-    <div class="center">
+    <div class="center pad0">
        <?php
-        $sql1=mysqli_query($conn,"select * from fruit where foodname='$uname'");
+        $sql1=mysqli_query($conn,"select * from $type where foodname='$uname'");
         $name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
         if($name==NULL)
         echo "No such food found";
         else {
-            
-            echo "Serving: ".$name["serving"]."<br>";
+            echo "<img src=\"".$name["image"]."\"><br>";
+            echo "Serving: ".$name["serving"]."g<br>";
             echo "Calories: ".$name["calories"]."<br>";
-            echo "Carbs: ".$name["carbs"]."<br>";
-            echo "Fat: ".$name["fat"]."<br>";
-            echo "Protien: ".$name["protien"]."<br>";
+            echo "Carbs: ".$name["carbs"]."g<br>";
+            echo "Fat: ".$name["fat"]."g<br>";
+            echo "Protein: ".$name["protein"]."g<br>";
         }
         ?>
     </div>
-    <div class="center">
+    <div class="center pad0">
         <?php
-    $sql1=mysqli_query($conn,"select * from fruit where foodname='$pass'");
+    $sql1=mysqli_query($conn,"select * from $type1 where foodname='$pass'");
     $name=mysqli_fetch_array($sql1,MYSQLI_ASSOC);    
     if($name==NULL)
         echo "No such food found";
         else {
-            echo "Serving: ".$name["serving"]."<br>";
+            echo "<img src=\"".$name["image"]."\"><br>";
+            echo "Serving: ".$name["serving"]."g<br>";
             echo "Calories: ".$name["calories"]."<br>";
-            echo "Carbs: ".$name["carbs"]."<br>";
-            echo "Fat: ".$name["fat"]."<br>";
-            echo "Protien: ".$name["protien"]."<br>";
+            echo "Carbs: ".$name["carbs"]."g<br>";
+            echo "Fat: ".$name["fat"]."g<br>";
+            echo "Protein: ".$name["protein"]."g<br>";
         }
         ?>
     </div>

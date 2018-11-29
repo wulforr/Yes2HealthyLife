@@ -52,13 +52,12 @@
 
     <header class="showcase">
     <div class="content">
-        <img src="images/logo.jpeg" class="logo" alt="food">
+        <img src="images/ju.png" class="logo" alt="food">
         <div class="title">
             Yes 2 Healthy Life
         </div>
         <div class="text">
-            <!--Hi everyone!! lets talk about the most important aspect of our life that is our health.-->
-            {Some quotes here which change every 2 sec using javascript}
+            Trusted health information for you.
         </div>
     </div>
     </header>
@@ -70,12 +69,14 @@
     <a href ="dbms.php" class="pad1 link">    
     <div class="pad0">
             <input type="hidden" id="hid1">
-            <p class="pad1">If you wanna check your bmi click here.</p>
+            <h3 class="pad0">BMI</h3>
+            <p class="pad0">If you wanna check your bmi click here.</p>
         </div>
                 </a>
         <a href="diet.php" class="pad1 link">
         <div  class="pad0">
-            <p class="pad1">If you want a diet plan which is curated specifically for you then no need to search more you have come to the right place. </p>
+        <h3 class="pad0">Diet Plan</h3>
+            <p class="pad0">A diet plan which is curated specifically for you. </p>
         </div>
                 </a>
     </div>

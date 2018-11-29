@@ -52,9 +52,9 @@
                       <label for="uname"><strong>Username :</strong></label>
                       <input type="text" id="uname" name="uname" class="myform" style="width:500px" placeholder="Enter your username"><br>
                       &emsp;&ensp;<label for="height"><strong>Height :&emsp;&ensp;</strong></label>
-                      <input type="text" id="height" name="height"  class="myform" style="width:500px" placeholder="Enter your height"> Cm<br>
+                      <input type="text" id="height" name="height"  class="myform" style="width:500px" placeholder="Enter your height" required> Cm<br>
                       &emsp;&ensp;<label for="weight"><strong>Weight :&emsp;&ensp;</strong></label>
-                      <input type="text" id="weight" name="weight" class="myform" style="width:500px" id="weight1" placeholder="Enter your weight"> Kg<br>
+                      <input type="text" id="weight" name="weight" class="myform" style="width:500px" id="weight1" placeholder="Enter your weight" required> Kg<br>
                       <input type="button" id="btn" value="Calculate" onclick="calcbmi()"> &emsp;&ensp; 
                       <input type="submit" id="btn1" value="Save">
                       
@@ -68,7 +68,9 @@
               <img src="images/bmi.jpg" id="image" width="800">
               </div>
               <div>
-               <p class="color"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt corporis assumenda dolorum explicabo facilis earum labore laboriosam facere voluptate, enim maxime est ullam necessitatibus itaque iusto? Voluptatem, modi. Perferendis, deserunt?</p>
+                  <h4 class="color">What is BMI?</h4>
+               <p class="color">The body mass index (BMI) or Quetelet index is a value derived from the mass (weight) and height of an individual. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m<sup>2</sup>.
+The BMI is an attempt to quantify the amount of tissue mass (muscle, fat, and bone) in an individual, and then categorize that person as underweight, normal weight, overweight, or obese based on that value.</p>
               </div>
               </div>
               

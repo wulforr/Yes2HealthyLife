@@ -109,3 +109,19 @@ h1{
 }
 
 
+
+input[type="text"]{
+    margin-top:15px;
+}
+
+img{
+    height:300px;
+    width:300px;
+}
+.pad0{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.pad1{
+    padding-bottom: 0px;
+}

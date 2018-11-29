@@ -53,6 +53,16 @@
     <div class="container">    
     <h1 class="center">Twofoods</h1>
     <form method="POST" action="twofoods.php" class="center">
+        <select name="type" id="type">
+            <option value="fruit">Fruit</option>
+            <option value="vegetables">Vegetable</option>
+            <option value="other">Other</option>
+            </select>&nbsp;&nbsp;
+            <select name="type1" id="type1">
+            <option value="fruit">Fruit</option>
+            <option value="vegetables">Vegetable</option>
+            <option value="other">Other</option>
+            </select>            <br>
         <input type="text" name="food1" placeholder="Enter food item">&nbsp;&nbsp;<input type="text" name="food2" placeholder="Enter another food item"><br><br>
         <input type="submit" value="Compare!">
     </form>
