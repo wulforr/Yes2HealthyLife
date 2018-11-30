@@ -38,13 +38,13 @@ else {
     $funfact=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
     echo "<h2>An Amazing fact : ".$funfact["fact"]."</h2>";
     echo "<a href=\"dbms1.php\" class=\"center\">click to continue</a>";*/
+    echo "<script>
+    window.location.href='dbms1.php';
+    </script>";
 }
 
 
 ?>
-<script>
-    window.location.href="dbms1.php";
-    </script>
 
 
 </body>

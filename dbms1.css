@@ -34,13 +34,13 @@ body{
 }
 
 .content .logo {
-    height: 180px;
-    width: 180px;
+    height: 280px;
+    width: 280px;
 }
 
 .content .title {
     font-size: 3.5rem;
-    margin-top: 0rem;
+    margin-top: -2rem;
 }
 
 .content .text {

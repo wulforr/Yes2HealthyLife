@@ -12,6 +12,10 @@ $var=$_POST["uname"];
 $var1=$_POST["height"];
 $var2=$_POST["weight"];
 $var3=($var2)/($var1*$var1)*10000;
+$sql=mysqli_query($conn,"select flag from temp where id = 1");
+$name=mysqli_fetch_array($sql,MYSQLI_ASSOC);
+if($name["flag"]==1)
+{
 $sql1=mysqli_query($conn,"select username from temp where id = 1");
 $name1=mysqli_fetch_array($sql1,MYSQLI_ASSOC);
 $name2=$name1["username"];
@@ -23,7 +27,10 @@ $name1=mysqli_fetch_array($sql2,MYSQLI_ASSOC);
 $name2=$name1["userid"];
 $name3="current_timestamp";
 $sql1=mysqli_query($conn,"insert into userbmi values($name2,$var3,$name3)");
+}
+else{
 
+}
 
 
 
@@ -89,8 +96,19 @@ $sql1=mysqli_query($conn,"insert into userbmi values($name2,$var3,$name3)");
                       <input type="submit" id="btn1" value="Save">
                       
                   </form>
-                  <span id="p1"> Your bmi has been saved</span>
-                  
+                  <span id="p1"><?php
+                  $sql=mysqli_query($conn,"select flag from temp where id = 1");
+                  $name=mysqli_fetch_array($sql,MYSQLI_ASSOC);
+                  if($name["flag"]==1)
+                  {
+                   echo "Your bmi has been saved";
+                  }
+                  else
+                  {
+                      echo "Please login first";
+                  }
+?>                  
+</span>
               </div>
               <div class="grid-2 bminfo">
               <div>
